@@ -8,3 +8,4 @@ marine build --release
 
 rm -f artifacts/*.wasm
 cp target/wasm32-wasi/release/calc_service.wasm artifacts/
+marine aqua artifacts/calc_service.wasm > artifacts/calc_service.aqua
