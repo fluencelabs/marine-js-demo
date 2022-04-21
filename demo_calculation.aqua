@@ -1,0 +1,11 @@
+import "./service/artifacts/calc_service.aqua"
+
+func demoCalculation(peer_id: string, relay_id: string) -> f32:
+    on peer_id via relay_id:
+        CalcService "calc"
+        CalcService.add(10)
+        CalcService.multiply(5)
+        CalcService.subtract(8)
+        CalcService.divide(6)
+        res <- CalcService.get_result()
+    <- res

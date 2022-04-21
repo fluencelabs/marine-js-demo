@@ -1,0 +1,19 @@
+{
+    "name": "marine-js-demo-node",
+    "version": "1.0.0",
+    "description": "Marine JS demo in nodejs",
+    "main": "index.js",
+    "scripts": {
+        "start": "node -r ts-node/register src/index.ts"
+    },
+    "author": "Fluence Labs",
+    "license": "ISC",
+    "dependencies": {
+        "@fluencelabs/fluence": "0.0.1-fix-marine-js-null-handling-650.0",
+        "@fluencelabs/fluence-network-environment": "^1.0.13"
+    },
+    "devDependencies": {
+        "typescript": "^4.0.0",
+        "ts-node": "^10.2.1"
+    }
+}
