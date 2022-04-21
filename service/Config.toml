@@ -1,6 +1,6 @@
 modules_dir = "artifacts/"
 
 [[module]]
-    name = "echo_service"
-    mem_pages_count = 1
-    logger_enabled = false
+    name = "calc_service"
+    max_heap_size = "1 KiB"
+    logger_enabled = true
