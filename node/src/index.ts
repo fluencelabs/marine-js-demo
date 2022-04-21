@@ -2,7 +2,7 @@ import { Fluence, loadWasmFromFileSystem } from '@fluencelabs/fluence';
 import { krasnodar } from '@fluencelabs/fluence-network-environment';
 import path from 'path';
 
-const relay = krasnodar[0];
+const relay = krasnodar[5];
 
 const wasmPath = path.join(__dirname, '../../service/artifacts/calc_service.wasm');
 
