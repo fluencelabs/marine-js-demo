@@ -1,0 +1,15 @@
+[package]
+name = "calc-service"
+version = "0.1.0"
+authors = ["Fluence Team"]
+edition = "2018"
+
+
+[[bin]]
+name = "calc_service"
+path = "src/main.rs"
+
+[dependencies]
+marine-rs-sdk = { version="0.6.14", feature=["log"]}
+log = "0.4.14"
+
