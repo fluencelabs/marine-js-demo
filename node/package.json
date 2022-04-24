@@ -9,7 +9,7 @@
     "author": "Fluence Labs",
     "license": "ISC",
     "dependencies": {
-        "@fluencelabs/fluence": "0.0.1-fix-marine-js-null-handling-650.0",
+        "@fluencelabs/fluence": "0.0.1-master-655.0",
         "@fluencelabs/fluence-network-environment": "^1.0.13"
     },
     "devDependencies": {

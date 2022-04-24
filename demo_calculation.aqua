@@ -1,11 +1,20 @@
 import "./service/artifacts/calc_service.aqua"
 
-func demoCalculation(peer_id: string, relay_id: string) -> f64:
+func demo_calculation(service_id: string) -> f64:
+    CalcService service_id
+    CalcService.add(10)
+    CalcService.multiply(5)
+    CalcService.subtract(8)
+    CalcService.divide(6)
+    res <- CalcService.state()
+    <- res
+
+func run_on_js_peer(peer_id: string, relay_id: string) -> f64:
     on peer_id via relay_id:
-        CalcService "calc"
-        CalcService.add(10)
-        CalcService.multiply(5)
-        CalcService.subtract(8)
-        CalcService.divide(6)
-        res <- CalcService.state()
+        res <- demo_calculation("calc")
+    <- res
+
+func run_on_rust_node(peer_id: string, service_id: string) -> f64:
+    on peer_id:
+        res <- demo_calculation(service_id)
     <- res

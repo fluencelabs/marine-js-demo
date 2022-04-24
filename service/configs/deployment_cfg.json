@@ -1,0 +1,11 @@
+{
+  "marine-js-demo": {
+    "name": "marine-js-demo",
+    "modules": [
+      {
+        "name": "marine-js-demo",
+        "path": "./artifacts/calc_service.wasm"
+      }
+    ]
+  }
+}

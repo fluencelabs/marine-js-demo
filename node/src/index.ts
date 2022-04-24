@@ -1,4 +1,4 @@
-import { Fluence, loadWasmFromFileSystem } from '@fluencelabs/fluence';
+import { Fluence, KeyPair, loadWasmFromFileSystem } from '@fluencelabs/fluence';
 import { krasnodar } from '@fluencelabs/fluence-network-environment';
 import path from 'path';
 
@@ -9,6 +9,9 @@ const wasmPath = path.join(__dirname, '../../service/artifacts/calc_service.wasm
 async function runServer() {
     await Fluence.start({
         connectTo: relay,
+        debug: {
+            marineLogLevel: 'info',
+        },
     });
 
     const service = await loadWasmFromFileSystem(wasmPath);

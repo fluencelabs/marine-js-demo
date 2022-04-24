@@ -8,6 +8,9 @@ const wasmPath = 'calc_service.wasm';
 async function runServer() {
     await Fluence.start({
         connectTo: relay,
+        debug: {
+            marineLogLevel: 'info',
+        },
     });
 
     const service = await loadWasmFromServer(wasmPath);
